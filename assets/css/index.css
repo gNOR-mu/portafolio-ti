@@ -21,7 +21,7 @@ section {
 }
 
 .blur-background {
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(10px);
 }
 
@@ -42,14 +42,9 @@ section {
 
 #inicio {
     min-height: 100vh;
-    position: relative;
 }
 
 .scroll-indicator {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
     color: white;
     cursor: pointer;
     transition: opacity 0.3s ease;
@@ -64,7 +59,7 @@ section {
     display: block;
     font-size: 2rem;
     font-weight: bold;
-    line-height: 0.7;
+    line-height: 1;
     color: #555;
     animation: color-pulse-seq 2s infinite ease-in-out;
 }
@@ -96,14 +91,22 @@ section {
     }
 }
 
-#tecnologias {
-    min-height: 50vh;
+.primary-skills {
+    min-height: 100vh;
+    background: linear-gradient(145deg, rgb(10, 14, 19) 0%, rgb(22, 45, 73) 100%);
+}
+
+.secondary-skills {
+    background: linear-gradient(145deg, rgb(8, 11, 15) 0%, rgb(12, 18, 25) 100%);
+}
+
+.secondary-skills .skill-card {
+    background-color: rgba(47, 52, 60, 0.4) !important;
 }
 
 #proyectos {
     min-height: 50vh;
 }
-
 
 
 .cursor {
@@ -127,4 +130,33 @@ section {
     background: linear-gradient(90deg, #2172ff 0%, #00f0ff 100%);
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.skill-card {
+    background-color: rgba(22, 27, 34, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: default;
+}
+
+
+.skill-icon {
+    width: auto;
+    height: 65px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.icon-nextjs {
+    height: 45px;
+    margin: 10px 0;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.15);
 }
