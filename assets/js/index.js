@@ -113,3 +113,68 @@ $(function () {
         return new bootstrap.Tooltip(tooltipTriggerEl);
     });
 });
+
+// NUEVOS PROYECTOS
+const proyectos = [
+    {
+        title: "Proyecto de título",
+        description: "GeoBasura: Geolocalización y Etiquetado de Residuos con Inteligencia Artificial",
+        image: "assets/img/projects/ubb/mapa_calor.png",
+        url: "projects/proyecto_ubb.html",
+        badges: [
+            { text: "Next.js", class: "bg-info text-dark" },
+            { text: "PostgreSQL", class: "bg-primary" },
+            { text: "Deep Learning", class: "bg-success" }
+        ]
+    },
+
+];
+
+// Renderizar Proyectos
+const proyectosContainer = $("#proyectos-container");
+$.each(proyectos, function (i, proyecto) {
+    let badgesHTML = '';
+    if (proyecto.badges && Array.isArray(proyecto.badges)) {
+        $.each(proyecto.badges, function (j, badge) {
+            badgesHTML += `<span class="badge ${badge.class} me-1 mb-1">${badge.text}</span> `;
+        });
+    }
+
+    proyectosContainer.append(`
+    <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="proyecto-card" data-url="${proyecto.url}" data-title="${proyecto.title}">
+            <div class="proyecto-img-container">
+                <img src="${proyecto.image}" class="proyecto-img" alt="${proyecto.title}">
+                <div class="proyecto-overlay">
+                    <span class="btn btn-outline-light rounded-pill px-4">Ver Proyecto</span>
+                </div>
+            </div>
+            <div class="p-4 bg-dark">
+                <h5 class="fw-bold text-white mb-2">${proyecto.title}</h5>
+                <p class="text-secondary small mb-0">${proyecto.description}</p>
+            </div>
+            <div class="px-4 py-2 border-top border-secondary bg-dark-subtle">
+                ${badgesHTML}
+            </div>
+        </div>
+    </div>
+    `);
+});
+
+// Eventos del Modal de Proyectos
+$(".proyecto-card").on("click", function () {
+    const url = $(this).data("url");
+    const title = $(this).data("title");
+
+    if (url === "#") return;
+
+    $("#proyectoModalLabel").text(title);
+    $("#proyectoIframe").attr("src", url);
+    $("#proyectoExternalLink").attr("href", url);
+    $("#proyectoModal").modal("show");
+});
+
+// Limpiar iframe al cerrar el modal
+$("#proyectoModal").on("hidden.bs.modal", function () {
+    $("#proyectoIframe").attr("src", "");
+});

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoBasura - Proyecto UBB</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/css/global.css">
+</head>
+
+<body>
+
+    <main class="container py-5">
+        <!-- Hero & Header -->
+        <header class="hero-section text-center">
+            <span class="academic-title">Original: DESARROLLO DE UNA HERRAMIENTA DE GEOLOCALIZACIÓN Y ETIQUETADO MANUAL
+                DE RESIDUOS PARA EL ENTRENAMIENTO DE UN MODELO DE APRENDIZAJE PROFUNDO</span>
+            <h1 class="app-name">GeoBasura</h1>
+
+            <div class="metadata-bar row text-start g-3">
+                <div class="col-md-3">
+                    <small class="text-secondary d-block uppercase font-weight-bold">Autores</small>
+                    <span>Sebastián Canales y Gabriel Norambuena</span>
+                </div>
+                <div class="col-md-3">
+                    <small class="text-secondary d-block">Profesor Guía</small>
+                    <span>Clemente Rubio-Manzano</span>
+                </div>
+                <div class="col-md-3">
+                    <small class="text-secondary d-block">Institución</small>
+                    <span>Universidad del Bio-Bío</span>
+                </div>
+                <div class="col-md-3">
+                    <small class="text-secondary d-block">DOI</small>
+                    <span>10.13140/RG.2.2.14623.21926</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Problemática -->
+        <section class="content-section">
+            <h2 class="section-title">Problemática</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <p class="fs-5">
+                        La gestión tradicional de residuos urbanos se basa en un modelo <strong>reactivo</strong> y poco
+                        eficiente. Las autoridades a menudo carecen de datos precisos sobre la ubicación y el tipo de
+                        desechos en tiempo real, lo que genera acumulaciones críticas y rutas de recolección subóptimas.
+                    </p>
+                    <p class="text-secondary">
+                        Esta falta de información granular impide el desarrollo de políticas públicas preventivas y
+                        reduce la capacidad de respuesta ante desparrames de basura en entornos complejos.
+                    </p>
+                </div>
+                <div class="col-lg-5">
+                    <figure class="mt-4 mt-lg-0">
+                        <img src="../assets/img/projects/ubb/problemática.png" class="img-fluid rounded-4 shadow"
+                            alt="Problematica residuos">
+                        <figcaption class="text-center text-secondary small mt-2">Figura 1.1: Residuos en distintos
+                            lugares de la ciudad</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Resumen del Proyecto</h2>
+            <p class="fs-5">
+                GeoBasura es una plataforma integral diseñada para optimizar la gestión de residuos urbanos fusionando
+                la <strong>ciencia ciudadana</strong> con la <strong>inteligencia artificial</strong>.
+            </p>
+
+            <figure class="my-4">
+                <img src="../assets/img/projects/ubb/mapa_calor.png" class="img-fluid rounded-4 shadow"
+                    alt="Mapa de calor de residuos">
+                <figcaption class="text-center text-secondary small mt-2">Figura 4.15: Vista de escritorio del mapa con
+                    acercamiento en Concepción y opción de mostrar el
+                    mapa de calor activada</figcaption>
+            </figure>
+
+            <p class="text-secondary">
+                El sistema permite a los ciudadanos actuar como sensores urbanos, subiendo imágenes georreferenciadas de
+                desechos que alimentan un mapa interactivo y sirven para entrenar un modelo de aprendizaje profundo.
+                Esta solución proporciona a las autoridades información granular en tiempo casi real para optimizar
+                rutas de recolección.
+            </p>
+        </section>
+
+        <!-- Arquitectura & Stack -->
+        <section class="content-section">
+            <h2 class="section-title">Arquitectura y Stack Tecnológico</h2>
+            <p class="text-secondary mb-4">El sistema se construyó con una arquitectura separada para asegurar su
+                escalabilidad y rendimiento móvil.</p>
+
+            <div class="row g-4">
+                <!-- Next.js -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="tech-card">
+                        <div class="tech-name">Next.js & NextAuth.js</div>
+                        <small class="text-secondary d-block mb-2">Aplicación Web</small>
+                        <p class="small mb-0">Gestión de la interfaz, autenticación robusta y lógica de negocio
+                            (Cliente/Servidor).</p>
+                    </div>
+                </div>
+                <!-- PostgreSQL/Prisma -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="tech-card">
+                        <div class="tech-name">PostgreSQL & Prisma ORM</div>
+                        <small class="text-secondary d-block mb-2">Base de Datos</small>
+                        <p class="small mb-0">Gestión robusta de datos y ORM para simplificar las interacciones SQL y
+                            asegurar integridad.</p>
+                    </div>
+                </div>
+                <!-- Mapbox -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="tech-card">
+                        <div class="tech-name">Mapbox SDK</div>
+                        <small class="text-secondary d-block mb-2">Mapas y Geo</small>
+                        <p class="small mb-0">Extracción de metadatos EXIF y visualización en mapas interactivos.</p>
+                    </div>
+                </div>
+                <!-- Flask -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="tech-card">
+                        <div class="tech-name">Python + Flask</div>
+                        <small class="text-secondary d-block mb-2">API de Inferencia (IA)</small>
+                        <p class="small mb-0">Servicio independiente dedicado exclusivamente a procesar imágenes.</p>
+                    </div>
+                </div>
+                <!-- YOLOv2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="tech-card">
+                        <div class="tech-name">YOLOv2 Architecture</div>
+                        <small class="text-secondary d-block mb-2">Modelo de Detección</small>
+                        <p class="small mb-0">Implementación You Only Look Once para procesamiento en tiempo real.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-title">Hitos y Logros Técnicos</h2>
+
+            <figure class="mb-5">
+                <img src="../assets/img/projects/ubb/inferencia_adicion_dataset.png" class="img-fluid rounded-4 shadow"
+                    alt="Inferencia y Dataset">
+                <figcaption class="text-center text-secondary small mt-2">Figura 2: Proceso de inferencia y crecimiento
+                    del dataset colaborativo.</figcaption>
+            </figure>
+
+            <div class="metadata-bar">
+                <div class="achievement-item">
+                    <div class="achievement-dot"></div>
+                    <div>
+                        <strong class="text-white d-block">Dataset Especializado</strong>
+                        <p class="text-secondary small">Creación desde cero de un conjunto de datos colaborativo con 52
+                            categorías distintas de residuos.</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-dot"></div>
+                    <div>
+                        <strong class="text-white d-block">Preprocesamiento Avanzado</strong>
+                        <p class="text-secondary small">Aplicación de Data Augmentation para incrementar el conjunto a
+                            1161 imágenes.</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-dot"></div>
+                    <div>
+                        <strong class="text-white d-block">Detección en Entornos Complejos</strong>
+                        <p class="text-secondary small">El modelo identifica exitosamente acumulaciones desordenadas
+                            ("desparrames") en fondos complejos.</p>
+                    </div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-dot"></div>
+                    <div>
+                        <strong class="text-white d-block">Sistema de Roles y Gestión</strong>
+                        <p class="text-secondary small">Arquitectura integral de usuarios desde ciudadanos aportantes
+                            hasta administradores supervisores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
