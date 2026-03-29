@@ -31,7 +31,7 @@
     </div>
 
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top blur-background" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg fixed-top blur-background">
             <div class="container-fluid ">
                 <a class="navbar-brand fw-bold px-3" href="#inicio">GN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -67,7 +67,7 @@
         <!-- INICIO -->
         <section id="inicio" class="container-fluid d-flex flex-column align-items-center">
             <div class="flex-grow-1 d-flex flex-column justify-content-center">
-                <h3 class="mb-3 text-light fw-light">
+                <h3 class="mb-3 fw-light">
                     ¡HOLA! soy <span class="text-primary fw-bold gradient-text">Gabriel Norambuena</span>
                 </h3>
                 <h1 class="fw-bold">
@@ -92,7 +92,7 @@
                     <h1 class="col-12">HABILIDADES PRINCIPALES</h1>
                     <h5 class="col">siempre aprendiendo</h5>
                 </div>
-                <div id="skills-container" class="row g-4 justify-content-center" data-bs-theme="dark"></div>
+                <div id="skills-container" class="row g-4 justify-content-center"></div>
             </div>
 
         </section>
@@ -104,7 +104,7 @@
                     <h1 class="col-12">HABILIDADES SECUNDARIAS</h1>
                     <h5 class="col">no por ser secundarias son menos importantes</h5>
                 </div>
-                <div id="secondary-skills-container" class="row g-4 justify-content-center" data-bs-theme="dark"></div>
+                <div id="secondary-skills-container" class="row g-4 justify-content-center"></div>
             </div>
 
         </section>
@@ -126,20 +126,19 @@
         <div class="modal fade" id="proyectoModal" tabindex="-1" aria-labelledby="proyectoModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-centered">
-                <div class="modal-content bg-dark text-white border-secondary">
-                    <div class="modal-header border-secondary blur-background">
+                <div class="modal-content">
+                    <div class="modal-header blur-background">
                         <div class="d-flex align-items-center">
-                            <a id="proyectoExternalLink" href="#" target="_blank" class="text-white me-3"
+                            <a id="proyectoExternalLink" href="#" target="_blank" class="me-3"
                                 title="Abrir en pestaña nueva">
                                 <img src="assets/img/evenodd.svg" loading="lazy">
                             </a>
                             <h5 class="modal-title fw-bold" id="proyectoModalLabel">Vista Previa del Proyecto</h5>
                         </div>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                            aria-label="Close"></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body p-0" style="height: 75vh;">
-                        <iframe id="proyectoIframe" src="" frameborder="0" width="100%" height="100%"
+                        <iframe id="projectIframe" src="" frameborder="0" width="100%" height="100%"
                             class="rounded-bottom"></iframe>
                     </div>
 
@@ -163,9 +162,8 @@
                             class="text-decoration-none">
                             <div class="card text-center skill-card h-100 bg-transparent">
                                 <div class="card-body d-flex flex-column justify-content-center align-items-center p-5">
-                                    <img src="assets/img/GitHub_Invertocat_White_Clearspace.png" width="65px"
-                                        alt="Logo GitHub">
-                                    <h4 class="card-title fw-bold text-white">GitHub</h4>
+                                    <img src="assets/img/GitHub_Invertocat_Black.svg" width="65px" alt="Logo GitHub">
+                                    <h4 class="card-title fw-bold">GitHub</h4>
                                     <p class="text-secondary small mb-0">Explora mi código y repositorios</p>
                                 </div>
                             </div>
@@ -179,7 +177,7 @@
                             <div class="card text-center skill-card h-100 bg-transparent">
                                 <div class="card-body d-flex flex-column justify-content-center align-items-center p-5">
                                     <img src="assets/img/LI-In-Bug.png" width="65px" alt="Logo linkedin">
-                                    <h4 class="card-title fw-bold text-white">LinkedIn</h4>
+                                    <h4 class="card-title fw-bold">LinkedIn</h4>
                                     <p class="text-secondary small mb-0">Conecta conmigo profesionalmente</p>
                                 </div>
                             </div>
