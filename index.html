@@ -18,8 +18,9 @@
 
     <!-- HEADER -->
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top bg-opacity-75 blur-background" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg fixed-top blur-background" data-bs-theme="dark">
             <div class="container-fluid ">
+                <a class="navbar-brand fw-bold px-3" href="#inicio">GN</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,7 +32,10 @@
                             <a class="nav-link" href="#inicio">Conóceme</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#tecnologias">Tecnologías</a>
+                            <a class="nav-link" href="#skills">Habilidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#secondary-skills">Secundarias</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#proyectos">Proyectos</a>
@@ -48,19 +52,19 @@
 
     <main class="container-fluid px-0">
         <!-- INICIO -->
-        <section id="inicio" class="container-fluid  d-flex align-items-center">
-            <div class="container px-md-5">
+        <section id="inicio" class="container-fluid d-flex flex-column align-items-center">
+            <div class="flex-grow-1 d-flex flex-column justify-content-center">
                 <h3 class="mb-3 text-light fw-light">
                     ¡HOLA! soy <span class="text-primary fw-bold gradient-text">Gabriel Norambuena</span>
                 </h3>
                 <h1 class="fw-bold">
                     <div>Ingeniero Civil en Informática</div>
-                    <div>y Desarrollador Backend <p>&gt; <span class="cursor">_</span></p>
+                    <div>y Desarrollador Backend &gt; <span class="cursor">_</span>
                     </div>
                 </h1>
             </div>
 
-            <a href="#tecnologias" class="scroll-indicator d-flex flex-column align-items-center text-decoration-none">
+            <a href="#skills" class="scroll-indicator d-flex flex-column align-items-center text-decoration-none pb-4">
                 <span class="chevron">⌄</span>
                 <span class="chevron">⌄</span>
                 <span class="chevron">⌄</span>
@@ -68,13 +72,42 @@
         </section>
 
         <!-- TECNOLOGÍAS y FRAMEWORKS -->
-        <section id="tecnologias">
+        <!-- HABILIDADES PRINCIPALES -->
+        <section id="skills" class="container-fluid d-flex flex-column align-items-center primary-skills">
+            <div class="container flex-grow-1 d-flex flex-column justify-content-center">
+                <div class="text-center mb-5">
+                    <h1 class="col-12">HABILIDADES PRINCIPALES</h1>
+                    <h5 class="col">siempre aprendiendo</h5>
+                </div>
+                <div id="skills-container" class="row g-4 justify-content-center" data-bs-theme="dark"></div>
+            </div>
 
-            --
-            --
-            --
-            --
+            <a href="#secondary-skills"
+                class="scroll-indicator d-flex flex-column align-items-center text-decoration-none pb-4">
+                <span class="chevron">⌄</span>
+                <span class="chevron">⌄</span>
+                <span class="chevron">⌄</span>
+            </a>
         </section>
+
+        <!-- HABILIDADES SECUNDARIAS -->
+        <section id="secondary-skills" class="container-fluid d-flex flex-column align-items-center secondary-skills">
+            <div class="container flex-grow-1 d-flex flex-column justify-content-center">
+                <div class="text-center mb-5">
+                    <h1 class="col-12">HABILIDADES SECUNDARIAS</h1>
+                    <h5 class="col">no por ser secundarias son menos importantes</h5>
+                </div>
+                <div id="secondary-skills-container" class="row g-4 justify-content-center" data-bs-theme="dark"></div>
+            </div>
+
+            <a href="#proyectos"
+                class="scroll-indicator d-flex flex-column align-items-center text-decoration-none pb-4">
+                <span class="chevron">⌄</span>
+                <span class="chevron">⌄</span>
+                <span class="chevron">⌄</span>
+            </a>
+        </section>
+
         <!--  PROYECTOS DESTACADOS -->
         <section id="proyectos">
 
@@ -103,6 +136,9 @@
     <script src="assets/js/three.min.js"></script>
     <script src="assets/js/vanta.globe.min.js"></script>
     <script src="assets/js/vantaConfig.js"></script>
+
+    <script src="assets/js/index.js"></script>
+
 </body>
 
 
