@@ -115,36 +115,38 @@
                 <h5 class="col">proyectos destacados</h5>
             </div>
 
-            <div id="proyectos-container" class="row g-4 px-2 px-md-5">
+            <div id="proyectos-container" class="row justify-content-center g-4 px-2 px-md-5">
                 <!-- Los proyectos se cargan con JS -->
             </div>
         </section>
 
-    </main>
 
-    <!-- Modal para Proyectos (Iframe) -->
-    <div class="modal fade" id="proyectoModal" tabindex="-1" aria-labelledby="proyectoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content bg-dark text-white border-secondary">
-                <div class="modal-header border-secondary blur-background">
-                    <div class="d-flex align-items-center">
-                        <a id="proyectoExternalLink" href="#" target="_blank" class="text-white me-3"
-                            title="Abrir en pestaña nueva">
-                            <img src="assets/img/evenodd.svg" loading="lazy">
-                        </a>
-                        <h5 class="modal-title fw-bold" id="proyectoModalLabel">Vista Previa del Proyecto</h5>
+        <!-- Modal para Proyectos (Iframe) -->
+        <div class="modal fade" id="proyectoModal" tabindex="-1" aria-labelledby="proyectoModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content bg-dark text-white border-secondary">
+                    <div class="modal-header border-secondary blur-background">
+                        <div class="d-flex align-items-center">
+                            <a id="proyectoExternalLink" href="#" target="_blank" class="text-white me-3"
+                                title="Abrir en pestaña nueva">
+                                <img src="assets/img/evenodd.svg" loading="lazy">
+                            </a>
+                            <h5 class="modal-title fw-bold" id="proyectoModalLabel">Vista Previa del Proyecto</h5>
+                        </div>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-0" style="height: 75vh;">
-                    <iframe id="proyectoIframe" src="" frameborder="0" width="100%" height="100%"
-                        class="rounded-bottom"></iframe>
-                </div>
+                    <div class="modal-body p-0" style="height: 75vh;">
+                        <iframe id="proyectoIframe" src="" frameborder="0" width="100%" height="100%"
+                            class="rounded-bottom"></iframe>
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
+
+    </main>
 
     <footer>
 
