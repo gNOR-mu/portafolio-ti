@@ -117,6 +117,17 @@ $(function () {
 // NUEVOS PROYECTOS
 const proyectos = [
     {
+        title: "E-TravelGo",
+        description: "Creación de una tienda digital con Spring Boot y bases de datos relacionales",
+        image: "assets/img/projects/ecommerce/index.png",
+        url: "projects/proyecto_bootcamp.html",
+        badges: [
+            { text: "Java 21", class: "bg-primary" },
+            { text: "Spring Boot", class: "bg-success" },
+            { text: "Thymeleaf", class: "bg-info text-dark" },
+            { text: "MySQL", class: "bg-warning text-dark" }]
+    },
+    {
         title: "Proyecto de título",
         description: "GeoBasura: Geolocalización y Etiquetado de Residuos con Inteligencia Artificial",
         image: "assets/img/projects/ubb/mapa_calor.png",
@@ -153,7 +164,7 @@ $.each(proyectos, function (i, proyecto) {
                 <h5 class="fw-bold text-white mb-2">${proyecto.title}</h5>
                 <p class="text-secondary small mb-0">${proyecto.description}</p>
             </div>
-            <div class="px-4 py-2 border-top border-secondary bg-dark-subtle">
+            <div class="px-4 py-2  ">
                 ${badgesHTML}
             </div>
         </div>
