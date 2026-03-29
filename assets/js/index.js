@@ -9,7 +9,7 @@ const primarySkills = [
         imgLink: "assets/img/postgresql_icon.svg",
         alt: "PostgreSQL icono",
         title: "Bases de datos",
-        description: "Modelamiento de datos, acceso a datos y rendimiento"
+        description: "PostgreSQL/MySQL, Modelamiento de datos, acceso a datos y rendimiento"
     },
     {
         imgLink: "assets/img/spring-boot-icon.svg",
@@ -25,7 +25,7 @@ $.each(primarySkills, function (i, skill) {
         <div class="card text-center skill-card h-100">
             <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
                 <img src="${skill.imgLink}" alt="${skill.title}" class="skill-icon" loading="lazy">
-                <h5 class="card-title mt-4 fw-bold text-white">${skill.title}</h5>
+                <h5 class="card-title mt-4 fw-bold">${skill.title}</h5>
                 <p class="text-secondary small mb-0">${skill.description}</p>
             </div>
         </div>
@@ -80,7 +80,7 @@ $.each(secondarySkills, function (i, skill) {
         <div class="card text-center skill-card h-100">
             <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
                 <img src="${skill.imgLink}" alt="${skill.title}" class="skill-icon ${skill.extraClass || ''}" loading="lazy">
-                <h5 class="card-title mt-4 fw-bold text-white">${skill.title}</h5>
+                <h5 class="card-title mt-4 fw-bold">${skill.title}</h5>
                 <p class="text-secondary small mb-0">${skill.description}</p>
             </div>
         </div>
@@ -153,15 +153,15 @@ $.each(proyectos, function (i, proyecto) {
 
     proyectosContainer.append(`
     <div class="col-12 col-md-6 col-lg-4 mb-4">
-        <div class="proyecto-card" data-url="${proyecto.url}" data-title="${proyecto.title}">
-            <div class="proyecto-img-container">
-                <img src="${proyecto.image}" class="proyecto-img" alt="${proyecto.title}" loading="lazy">
-                <div class="proyecto-overlay">
-                    <span class="btn btn-outline-light rounded-pill px-4">Ver Proyecto</span>
+        <div class="project-card" data-url="${proyecto.url}" data-title="${proyecto.title}">
+            <div class="project-img-container">
+                <img src="${proyecto.image}" class="project-img" alt="${proyecto.title}" loading="lazy">
+                <div class="project-overlay">
+                    <span class="btn btn-outline-primary rounded-pill px-4">Ver Proyecto</span>
                 </div>
             </div>
-            <div class="p-4 bg-dark">
-                <h5 class="fw-bold text-white mb-2">${proyecto.title}</h5>
+            <div class="p-4">
+                <h5 class="fw-bold mb-2">${proyecto.title}</h5>
                 <p class="text-secondary small mb-0">${proyecto.description}</p>
             </div>
             <div class="px-4 py-2  ">
@@ -173,19 +173,19 @@ $.each(proyectos, function (i, proyecto) {
 });
 
 // Eventos del Modal de Proyectos
-$(".proyecto-card").on("click", function () {
+$(".project-card").on("click", function () {
     const url = $(this).data("url");
     const title = $(this).data("title");
 
     if (url === "#") return;
 
     $("#proyectoModalLabel").text(title);
-    $("#proyectoIframe").attr("src", url);
+    $("#projectIframe").attr("src", url);
     $("#proyectoExternalLink").attr("href", url);
     $("#proyectoModal").modal("show");
 });
 
 // Limpiar iframe al cerrar el modal
 $("#proyectoModal").on("hidden.bs.modal", function () {
-    $("#proyectoIframe").attr("src", "");
+    $("#projectIframe").attr("src", "");
 });
