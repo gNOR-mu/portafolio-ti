@@ -19,11 +19,8 @@ const primarySkills = [
     },
 ]
 
-const primarySkillsContainer = $("#skills-container");
-
-
-primarySkills.forEach(skill => {
-    primarySkillsContainer.append(`
+$.each(primarySkills, function (i, skill) {
+    $("#skills-container").append(`
     <div class="col-6 col-sm-6 col-md-4 mb-4">
         <div class="card text-center skill-card h-100">
             <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
@@ -66,15 +63,19 @@ const secondarySkills = [
         imgLink: "assets/img/nextjs-13.svg",
         alt: "Next.js icono",
         title: "Next.js",
-        description: "Aplicaciones Front-End con TypeScript",
-        extraClass: "icon-nextjs"
+        description: "Aplicaciones Front-End con TypeScript"
+    },
+    {
+        imgLink: "assets/img/icons8-bootstrap.svg",
+        alt: "Bootstrap icono",
+        title: "Bootstrap",
+        description: "Estilo y diseño responsivo"
     },
 ]
 
-const secondarySkillsContainer = $("#secondary-skills-container");
-
-secondarySkills.forEach(skill => {
-    secondarySkillsContainer.append(`
+// Renderizar habilidades secundarias con jQuery
+$.each(secondarySkills, function (i, skill) {
+    $("#secondary-skills-container").append(`
     <div class="col-6 col-sm-6 col-md-4 mb-4">
         <div class="card text-center skill-card h-100">
             <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
@@ -85,4 +86,30 @@ secondarySkills.forEach(skill => {
         </div>
     </div>
     `);
+});
+
+// Navegación por puntos con jQuery
+$(window).on('scroll', function () {
+    const scrollPos = $(window).scrollTop();
+    const windowHeight = $(window).height();
+
+    $("section[id]").each(function () {
+        const section = $(this);
+        const sectionTop = section.offset().top - (windowHeight * 0.45);
+        const sectionBottom = sectionTop + section.outerHeight();
+
+        if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+            const activeId = section.attr("id");
+            $(".dot-nav-item").removeClass("active");
+            $(`.dot-nav-item[href="#${activeId}"]`).addClass("active");
+        }
+    });
+});
+
+// Inicialización de Tooltips (Bootstrap requiere vanilla o jQuery plugin)
+$(function () {
+    const tooltipTriggerList = [].slice.call($('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
 });
