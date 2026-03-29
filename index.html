@@ -9,7 +9,7 @@
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/global.css">
 
 </head>
 
@@ -107,18 +107,42 @@
         </section>
 
         <!--  PROYECTOS DESTACADOS -->
-        <section id="proyectos">
+        <section id="proyectos" class="container-fluid pb-5">
             <div class="text-center mb-5">
                 <h1 class="col-12">PORTAFOLIO</h1>
                 <h5 class="col">proyectos destacados</h5>
             </div>
-            -
-            -
-            -
-            -
+
+            <div id="proyectos-container" class="row g-4 px-2 px-md-5">
+                <!-- Los proyectos se cargan con JS -->
+            </div>
         </section>
 
     </main>
+
+    <!-- Modal para Proyectos (Iframe) -->
+    <div class="modal fade" id="proyectoModal" tabindex="-1" aria-labelledby="proyectoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-secondary blur-background">
+                    <div class="d-flex align-items-center">
+                        <a id="proyectoExternalLink" href="#" target="_blank" class="text-white me-3"
+                            title="Abrir en pestaña nueva">
+                            <img src="assets/img/evenodd.svg">
+                        </a>
+                        <h5 class="modal-title fw-bold" id="proyectoModalLabel">Vista Previa del Proyecto</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0" style="height: 75vh;">
+                    <iframe id="proyectoIframe" src="" frameborder="0" width="100%" height="100%"
+                        class="rounded-bottom"></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <footer>
 
