@@ -16,7 +16,17 @@
 <body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-root-margin="0px 0px -40%"
     data-bs-smooth-scroll="true" class="font-monospace">
 
-    <!-- HEADER -->
+    <div class="dot-nav-container d-none d-md-flex flex-column">
+        <a href="#inicio" class="dot-nav-item active" data-bs-toggle="tooltip" data-bs-placement="left"
+            title="Inicio"></a>
+        <a href="#skills" class="dot-nav-item" data-bs-toggle="tooltip" data-bs-placement="left"
+            title="Habilidades"></a>
+        <a href="#secondary-skills" class="dot-nav-item" data-bs-toggle="tooltip" data-bs-placement="left"
+            title="Secundarias"></a>
+        <a href="#proyectos" class="dot-nav-item" data-bs-toggle="tooltip" data-bs-placement="left"
+            title="Proyectos"></a>
+    </div>
+
     <header>
         <nav class="navbar navbar-expand-lg fixed-top blur-background" data-bs-theme="dark">
             <div class="container-fluid ">
@@ -82,12 +92,6 @@
                 <div id="skills-container" class="row g-4 justify-content-center" data-bs-theme="dark"></div>
             </div>
 
-            <a href="#secondary-skills"
-                class="scroll-indicator d-flex flex-column align-items-center text-decoration-none pb-4">
-                <span class="chevron">⌄</span>
-                <span class="chevron">⌄</span>
-                <span class="chevron">⌄</span>
-            </a>
         </section>
 
         <!-- HABILIDADES SECUNDARIAS -->
@@ -100,17 +104,14 @@
                 <div id="secondary-skills-container" class="row g-4 justify-content-center" data-bs-theme="dark"></div>
             </div>
 
-            <a href="#proyectos"
-                class="scroll-indicator d-flex flex-column align-items-center text-decoration-none pb-4">
-                <span class="chevron">⌄</span>
-                <span class="chevron">⌄</span>
-                <span class="chevron">⌄</span>
-            </a>
         </section>
 
         <!--  PROYECTOS DESTACADOS -->
         <section id="proyectos">
-
+            <div class="text-center mb-5">
+                <h1 class="col-12">PORTAFOLIO</h1>
+                <h5 class="col">proyectos destacados</h5>
+            </div>
             -
             -
             -
