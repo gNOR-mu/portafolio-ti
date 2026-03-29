@@ -3,7 +3,7 @@ const primarySkills = [
         imgLink: "assets/img/java_icon.svg",
         alt: "Java icono",
         title: "Desarrollador Java",
-        description: "POO, Lógica de servicor y escalabilidad"
+        description: "POO, Lógica de servidor y escalabilidad"
     },
     {
         imgLink: "assets/img/postgresql_icon.svg",
@@ -24,7 +24,7 @@ $.each(primarySkills, function (i, skill) {
     <div class="col-6 col-sm-6 col-md-4 mb-4">
         <div class="card text-center skill-card h-100">
             <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                <img src="${skill.imgLink}" alt="${skill.title}" class="skill-icon">
+                <img src="${skill.imgLink}" alt="${skill.title}" class="skill-icon" loading="lazy">
                 <h5 class="card-title mt-4 fw-bold text-white">${skill.title}</h5>
                 <p class="text-secondary small mb-0">${skill.description}</p>
             </div>
@@ -79,7 +79,7 @@ $.each(secondarySkills, function (i, skill) {
     <div class="col-6 col-sm-6 col-md-4 mb-4">
         <div class="card text-center skill-card h-100">
             <div class="card-body d-flex flex-column justify-content-center align-items-center p-4">
-                <img src="${skill.imgLink}" alt="${skill.title}" class="skill-icon ${skill.extraClass || ''}">
+                <img src="${skill.imgLink}" alt="${skill.title}" class="skill-icon ${skill.extraClass || ''}" loading="lazy">
                 <h5 class="card-title mt-4 fw-bold text-white">${skill.title}</h5>
                 <p class="text-secondary small mb-0">${skill.description}</p>
             </div>
@@ -144,7 +144,7 @@ $.each(proyectos, function (i, proyecto) {
     <div class="col-12 col-md-6 col-lg-4 mb-4">
         <div class="proyecto-card" data-url="${proyecto.url}" data-title="${proyecto.title}">
             <div class="proyecto-img-container">
-                <img src="${proyecto.image}" class="proyecto-img" alt="${proyecto.title}">
+                <img src="${proyecto.image}" class="proyecto-img" alt="${proyecto.title}" loading="lazy">
                 <div class="proyecto-overlay">
                     <span class="btn btn-outline-light rounded-pill px-4">Ver Proyecto</span>
                 </div>
