@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../assets/css/global.css">
+</head>
+
+<body>
+
+
+    <main class="container py-5">
+        <!-- Hero & Header -->
+        <header class="hero-section text-center">
+            <span class="academic-title">Desarrollo de un E-commerce para el Bootcamp "DESARROLLO DE APLICACIONES FULL
+                STACK JAVA TRAINEE v2.0"</span>
+            <h1 class="app-name">E-TravelGo</h1>
+
+            <div
+                class="metadata-bar row justify-content-center g-3 border-top border-bottom border-secondary py-3 mt-4">
+                <div class="col-md-4">
+                    <small class="text-secondary d-block uppercase font-weight-bold">Nombre del proyecto</small>
+                    <span>E-TravelGo</span>
+                </div>
+                <div class="col-md-4">
+                    <small class="text-secondary d-block">Beca</small>
+                    <span>Sence (480 h)</span>
+                </div>
+                <div class="col-md-4">
+                    <small class="text-secondary d-block">Periodo</small>
+                    <span>Oct. 2025 - Abr. 2026</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Descripción general -->
+        <section class="content-section mb-5">
+            <h2 class="section-title fw-bold mb-4">Contexto de Formación</h2>
+            <div class="row">
+                <div>
+                    <p class="fs-5 text-light">
+                        Este proyecto representa la culminación práctica de un programa intensivo de 480 horas enfocado
+                        en el ciclo completo de desarrollo de software.
+                    </p>
+                    <p class="text-secondary">
+                        Durante el proceso, se abordaron desde los fundamentos del diseño web (HTML5, CSS, JS, jQuery,
+                        Bootstrap) hasta el modelado avanzado de bases de datos relacionales, culminando con la
+                        programación de arquitecturas empresariales utilizando <strong>Java 21, JEE y el framework
+                            Spring Boot</strong>.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <figure class="mt-4 mt-lg-0">
+                    <img src="../assets/img/projects/ecommerce/index.png" class="img-fluid rounded-4 shadow"
+                        alt="Problematica residuos" loading="lazy">
+                    <figcaption class="text-center text-secondary small mt-2">Figura: Vista de inicio para computadores
+                        de escritorio</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- APARTADO SEGURIDAD -->
+        <section class="content-section">
+            <h2 class="section-title">Seguridad</h2>
+            <p class="fs-5">
+                Hoy en día, la protección de datos es uno de los pilares más importantes de cualquier aplicación
+                moderna, más aún en un E-commerce.
+            </p>
+            <p class="text-secondary">
+                E-TravelGo integra e implementa Spring Security para una
+                gestión robusta de autenticación y autorización. La aplicación integra Control de Acceso Basado en Roles
+                (RBAC) y gestión segura de sesiones, garantizando la seguridad y protección de las rutas críticas del
+                sistema contra vulnerabilidades comunes.
+            </p>
+            <figure class="mt-4 mt-lg-0">
+                <img src="../assets/img/projects/ecommerce/login.png" class="img-fluid rounded-4 shadow"
+                    alt="Problematica residuos" loading="lazy">
+                <figcaption class="text-center text-secondary small mt-2">Figura: Página de inicio de sesión para
+                    dispositivos de escritorio</figcaption>
+            </figure>
+
+
+        </section>
+        <!-- SECCIÓN: Patrones de Diseño-->
+        <section class="content-section mb-5 py-4 border-top border-secondary">
+            <div class="row align-items-center g-5">
+
+                <!-- Columna de Código Strategy -->
+                <div class="col-lg-6 order-2 order-lg-1">
+                    <div class="rounded-4 overflow-hidden border border-secondary shadow-lg">
+                        <!-- Cabecera de la terminal -->
+                        <div class="bg-dark px-3 py-2 d-flex align-items-center border-bottom border-secondary">
+                            <div class="d-flex gap-2 me-3">
+                                <div class="rounded-circle bg-danger code-header"></div>
+                                <div class="rounded-circle bg-warning code-header"></div>
+                                <div class="rounded-circle bg-success code-header"></div>
+                            </div>
+                            <span class="text-secondary small font-monospace">DiscountRule.java</span>
+                        </div>
+                        <!-- Cuerpo del código -->
+                        <div class="p-3 bg-black text-light font-monospace small code-body">
+                            <pre class="mb-0"><code><span class="text-success">/**
+ * Interfaz para definir las reglas de descuento que aplican a los productos.
+ *
+ * @author Gabriel Norambuena
+ * @version 1.1
+ */</span>
+<span class="text-primary">public interface</span> <span class="text-info">DiscountRule</span> {
+    <span class="text-secondary">/** Verifica si un carrito aplica para el descuento */</span>
+    <span class="text-primary">boolean</span> isApplicable(Cart cart);
+    
+    <span class="text-secondary">/** Calcula el monto a descontar */</span>
+    BigDecimal calculateDiscount(Cart cart);
+    
+    <span class="text-primary">String</span> getName();
+    <span class="text-primary">String</span> getCondition();
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna de Texto Strategy -->
+                <div class="col-lg-6 order-1 order-lg-2">
+                    <div class="d-flex align-items-center mb-3">
+                        <h2 class="section-title fw-bold mb-0">Patrón Strategy</h2>
+                    </div>
+                    <p class="text-secondary fs-6" style="line-height: 1.7;">
+                        Para el motor de precios y promociones del E-commerce, eludí la trampa común de anidar múltiples
+                        bloques <code>if/else</code> mediante la implementación del patrón de diseño
+                        <strong>Strategy</strong>.
+                    </p>
+                    <p class="text-secondary fs-6" style="line-height: 1.7;">
+                        Al definir la interfaz <code>DiscountRule</code>, el sistema puede evaluar dinámicamente una
+                        colección de estrategias de descuento inyectadas por Spring. Esto respeta el principio
+                        <em>Open/Closed</em>: permite agregar nuevas campañas promocionales en el futuro creando nuevas
+                        clases, sin necesidad de modificar ni romper el código base existente del carrito.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Stack -->
+        <section class="content-section">
+            <h2 class="section-title">Arquitectura y Stack Tecnológico</h2>
+
+            <div class="row g-4">
+                <!-- Spring Boot, Java 21 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="tech-card">
+                        <div class="tech-name">Spring Boot 4 & Java 21</div>
+                        <small class="text-secondary d-block mb-2">Aplicación Web</small>
+                        <p class="small mb-0">Lógica de negocio, controladores, seguridad y configuración del servidor
+                            backend.</p>
+                    </div>
+                </div>
+
+                <!-- MySQL, JPA -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="tech-card">
+                        <div class="tech-name">MySQL & JPA</div>
+                        <small class="text-secondary d-block mb-2">Base de Datos</small>
+                        <p class="small mb-0">Persistencia de datos, modelado relacional y mapeo objeto-relacional
+                            (ORM).</p>
+                    </div>
+                </div>
+
+                <!-- Thymeleaf -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="tech-card">
+                        <div class="tech-name">Thymeleaf & Bootstrap</div>
+                        <small class="text-secondary d-block mb-2">Vistas y diseño</small>
+                        <p class="small mb-0">Renderizado de vistas del lado del servidor (SSR) e interfaces
+                            responsivas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ENLACE REPO -->
+        <section class="content-section text-center mt-5 pt-5 pb-4 border-top border-secondary">
+
+            <h3 class="fw-bold text-white mb-3">¿Quieres ver el código en acción?</h3>
+            <p class="text-secondary mb-4 mx-auto" style="max-width: 600px;">
+                Explora la arquitectura completa, los controladores, la configuración de Spring Security y el
+                modelo de datos directamente en el repositorio.
+            </p>
+
+            <a href="https://github.com/gNOR-mu/ecommerce-m7" target="_blank" rel="noopener noreferrer"
+                class="btn btn-outline-light btn-lg rounded-pill px-5 py-3 d-inline-flex align-items-center gap-3 btn-github-cta ">
+
+                <img src="../assets/img/GitHub_Invertocat_White_Clearspace.png" alt="logo GitHub" width="40px" />
+
+                <span class="fw-bold font-monospace">Ver repositorio en GitHub</span>
+            </a>
+        </section>
+    </main>
+
+</body>
+
+</html>
